@@ -15,6 +15,7 @@
 ]]
 
 Configuration = {
+	RigName = "NeptV",
 	ReturnOnDeath = true,
 	Flinging = true,
 	PresetFling = true, -- if set to false, KadeAPI.CallFling() won't do anything.
@@ -46,6 +47,8 @@ local KadeAPI = getfenv().KadeAPI
 -- Put the script below this message and do as instructed above ^
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
 --- Was supposed to be for the770zone, or VengefulProgram.
+
+local chr = KadeAPI.GetCharacter()
 
 function LoadLibrary(a)
 	local t = {}
@@ -1193,8 +1196,8 @@ end
 
 
 plr = game:GetService("Players").LocalPlayer
-char = KadeAPI:GetCharacter()
-hum = KadeAPI:GetHumanoid()
+char = chr
+hum = char.Humanoid
 local cam = game.Workspace.CurrentCamera
 t = char.Torso
 h = char.Head
@@ -1204,7 +1207,7 @@ rl = char["Right Leg"]
 ll = char["Left Leg"]
 tors = char.Torso
 lleg = char["Left Leg"]
-root = KadeAPI:GetRootPart()
+root = char.HumanoidRootPart
 hed = char.Head
 rleg = char["Right Leg"]
 rarm = char["Right Arm"]
@@ -1615,7 +1618,7 @@ end
 ---- WEAPON OR STUFF
 local rarmor = CreateParta(m,1,0,"SmoothPlastic",BrickColor.Random())
 local weaponweld = CreateWeld(rarmor,tors,rarmor,-3,0,-0.5,math.rad(0),math.rad(0),math.rad(-40),0,0,0,math.rad(0),math.rad(0),math.rad(0))
-local MainWeldS = KadeAPI:SetHatAlign(weaponinfo, rarmor, CFrame.new(0, -0.1, 2.3)*CFrame.Angles(0, math.rad(90), math.rad(180))) --CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local MainWeldS = KadeAPI.SetHatAlign(weaponinfo, rarmor, CFrame.new(0,0.25,0.5) * CFrame.Angles(math.rad(0),math.rad(-90),math.rad(-90))) --CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
 local A0 = Instance.new("Attachment",rarmor)
 A0.Position = Vector3.new(-2.5,0.25,0)
 local A1 = Instance.new("Attachment",rarmor)
@@ -1699,12 +1702,12 @@ function CreateWeld(Parent, Part0, Part1, C0, C1)
 end
 
 Player=game:GetService("Players").LocalPlayer
-Character=KadeAPI:GetCharacter() 
+Character=chr
 PlayerGui=Player.PlayerGui 
 Backpack=Player.Backpack 
 Torso=Character.Torso 
 Head=Character.Head 
-Humanoid=KadeAPI:GetHumanoid()
+Humanoid=Character.Humanoid
 m=Instance.new('Model',Character)
 LeftArm=Character["Left Arm"] 
 LeftLeg=Character["Left Leg"] 
@@ -1729,7 +1732,7 @@ LHC0=cf(-1,-1,0,-0,-0,-1,0,1,0,1,0,0)
 LHC1=cf(-0.5,1,0,-0,-0,-1,0,1,0,1,0,0)
 RHC0=cf(1,-1,0,0,0,1,0,1,0,-1,-0,-0)
 RHC1=cf(0.5,1,0,0,0,1,0,1,0,-1,-0,-0)
-RootPart=Character:GetRootPart()
+RootPart=Character.HumanoidRootPart
 RootJoint=RootPart.RootJoint
 RootCF=euler(-1.57,0,3.14)
 attack = false 

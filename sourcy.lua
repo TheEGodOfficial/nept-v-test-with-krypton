@@ -34,10 +34,7 @@ Configuration = {
 local api = game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Krypton/main/Module.luau")
 loadstring("game = workspace.Parent; "..api)()
 
-local KadeAPI = getgenv().KadeAPI
-
-KadeAPI:ForceAnimationsOff()
-
+local KadeAPI = getfenv().KadeAPI
 --[[
 	Basically now, to convert a script you need to have a bit of basic lua knowledge.
 	If you find "game.Players.LocalPlayer" or anything else with LocalPlayer replace it with, "CMouse:GetPlayer()"

@@ -29,7 +29,11 @@ Configuration = {
 	AccessoryFallbackDefaults = true,
 	OverlayFakeCharacter = false,
 
-	Hats = nil, -- Set to nil if you want to use defaults.
+	Hats = {
+		["Torso"] = {
+			{Texture = "14251599953", Mesh = "14241018198", Name = "Black", Offset = CFrame.identity},
+		},
+	}, -- Set to nil if you want to use defaults.
 }
 
 local api = game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Krypton/main/Module.luau")

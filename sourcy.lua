@@ -51,6 +51,9 @@ local KadeAPI = getfenv().KadeAPI
 local chr = KadeAPI.GetCharacter()
 local rchr = KadeAPI:GetRealCharacter()
 
+local weapon = rchr:WaitForChild("Accessory (NeptunesSword)")
+local weaponinfo = KadeAPI.GetHatInformation(weapon)
+
 function LoadLibrary(a)
 	local t = {}
 
@@ -1603,17 +1606,6 @@ function CreateWeld(parent,part0,part1,C1X,C1Y,C1Z,C1Xa,C1Ya,C1Za,C0X,C0Y,C0Z,C0
 	weld.C1 = CFrame.new(C1X,C1Y,C1Z)*CFrame.Angles(C1Xa,C1Ya,C1Za)
 	weld.C0 = CFrame.new(C0X,C0Y,C0Z)*CFrame.Angles(C0Xa,C0Ya,C0Za)
 	return weld
-end
-
-local weaponinfo = nil
-
-for _, hat in pairs(rchr:GetChildren()) do
-	if hat:IsA("Accessory") or hat:IsA("Hat") then
-		local info = KadeAPI:GetHatInformation()
-		if info.MeshId == "rbxassetid://18180014249" and info.TextureId == "rbxassetid://17357264046" then
-			weaponinfo = info
-		end
-	end
 end
 
 ---- WEAPON OR STUFF

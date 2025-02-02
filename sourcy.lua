@@ -48,7 +48,7 @@ local KadeAPI = getfenv().KadeAPI
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
 --- Was supposed to be for the770zone, or VengefulProgram.
 
-local chr = KadeAPI.GetCharacter()
+local chr = workspace:WaitForChild("Terrain"):WaitForChild("NeptV")
 
 function LoadLibrary(a)
 	local t = {}

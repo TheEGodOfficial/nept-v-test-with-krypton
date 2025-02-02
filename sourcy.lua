@@ -1714,7 +1714,6 @@ LS=Torso["Left Shoulder"]
 LH=Torso["Left Hip"] 
 RS=Torso["Right Shoulder"] 
 RH=Torso["Right Hip"] 
-Face = Head.face
 Neck=Torso.Neck
 it=Instance.new
 attacktype=1

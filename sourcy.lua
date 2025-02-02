@@ -1616,7 +1616,7 @@ end
 ---- WEAPON OR STUFF
 local rarmor = CreateParta(m,1,0,"SmoothPlastic",BrickColor.Random())
 local weaponweld = CreateWeld(rarmor,tors,rarmor,-3,0,-0.5,math.rad(0),math.rad(0),math.rad(-40),0,0,0,math.rad(0),math.rad(0),math.rad(0))
-local MainWeldS = KadeAPI.SetHatAlign(weaponinfo, rarmor, CFrame.new(0,0.25,0.5) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))) --CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local MainWeldS = KadeAPI.SetHatAlign(weaponinfo, rarmor, CFrame.new(0,0,0) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))) --CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
 local A0 = Instance.new("Attachment",rarmor)
 A0.Position = Vector3.new(-2.5,0.25,0)
 local A1 = Instance.new("Attachment",rarmor)

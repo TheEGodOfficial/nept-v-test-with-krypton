@@ -2041,9 +2041,9 @@ function Triangle(a, b, c)
 end
 
 
-function Damagefunc(Part, hit, minim, maxim, knockback, Type, Property, Delay, HitSound, HitPitch)
-	local model = hit:FindFirstAncestorOfClass("Model")
-	if model then
+function Damagefunc(hit)
+	local model = hit.Parent
+	if model:IsA("Model") and model:FindFirstChildOfClass("Humanoid") then
 		KadeAPI:CallFling(model)
 	end
 end
@@ -2108,7 +2108,7 @@ function MagniDamage(Part, magni, mindam, maxdam, knock, Type,Sound)
 				local targ = head.Position - Part.Position
 				local mag = targ.magnitude
 				if magni >= mag and c.Name ~= Player.Name then
-					Damagefunc(head, head, mindam, maxdam, knock, Type, RootPart, 0.1, "rbxassetid://" ..Sound, 1)
+					Damagefunc(head)
 				end
 			end
 			local head = c:findFirstChild("UpperTorso")
@@ -2116,7 +2116,7 @@ function MagniDamage(Part, magni, mindam, maxdam, knock, Type,Sound)
 				local targ = head.Position - Part.Position
 				local mag = targ.magnitude
 				if magni >= mag and c.Name ~= Player.Name then
-					Damagefunc(head, head, mindam, maxdam, knock, Type, RootPart, 0.1, "rbxassetid://" ..Sound, 1)
+					Damagefunc(head)
 				end
 			end
 		end

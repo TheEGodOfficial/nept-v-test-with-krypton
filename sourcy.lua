@@ -19,7 +19,7 @@ Configuration = {
 	Flinging = true,
 	PresetFling = true, -- if set to false, KadeAPI.CallFling() won't do anything.
 	Animations = true,
-	WaitTime = 0.22,
+	WaitTime = 0.3,
 	TeleportOffsetRadius = 20,
 	NoCollisions = true,
 	AntiVoiding = true,
@@ -33,7 +33,9 @@ Configuration = {
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Krypton/main/Module.luau"))()
 
-local KadeAPI = _G.KadeAPI
+local KadeAPI = getgenv().KadeAPI
+
+KadeAPI:ForceAnimationsOff()
 
 while game:GetService("Players").LocalPlayer == nil do
 	 game:GetService("RunService").Stepped:wait()

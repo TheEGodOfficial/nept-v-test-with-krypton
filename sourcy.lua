@@ -48,7 +48,8 @@ local KadeAPI = getfenv().KadeAPI
 --- Did actually rework heavily away from original neptunian, and the non-rework neptunian. --NoobyGames12
 --- Was supposed to be for the770zone, or VengefulProgram.
 
-local chr = workspace:WaitForChild("Terrain"):WaitForChild("NeptV")
+local chr = KadeAPI.GetCharacter()
+local rchr = KadeAPI:GetRealCharacter()
 
 function LoadLibrary(a)
 	local t = {}
@@ -1606,7 +1607,7 @@ end
 
 local weaponinfo = nil
 
-for _, hat in pairs(Character:GetChildren()) do
+for _, hat in pairs(rchr:GetChildren()) do
 	if hat:IsA("Accessory") or hat:IsA("Hat") then
 		local info = KadeAPI:GetHatInformation()
 		if info.MeshId == "rbxassetid://18180014249" and info.TextureId == "rbxassetid://17357264046" then

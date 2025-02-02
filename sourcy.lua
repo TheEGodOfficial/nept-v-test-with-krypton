@@ -3358,7 +3358,6 @@ while true do
 	kan.Pitch = ORPIT
 	kan.SoundId = "rbxassetid://" ..ORGID
 	kan.Looped = true
-	kan.Parent = plr.PlayerGui
 	kan:Resume()
 	techc.Rotation = techc.Rotation + 0.1
 	imgl2.Rotation = imgl2.Rotation - kan.PlaybackLoudness/50

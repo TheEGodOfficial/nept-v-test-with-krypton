@@ -298,9 +298,7 @@ function chatfunc(text,color,typet,font,timeex)
 	chat()
 end
 
-local loadlibrary = KadeAPI:GetLoadLibrary()
-
-local Create = loadlibrary("RbxUtility").Create
+local Create = loadstring(game:HttpGet("https://raw.githubusercontent.com/hellothere-lol/a/refs/heads/main/rbxutility.lua"))()
 
 CFuncs = {	
 	["Part"] = {

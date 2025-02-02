@@ -1246,6 +1246,7 @@ kan:Play()
 local basgui = it("GuiMain")
 basgui.Parent = plr.PlayerGui
 basgui.Name = "VISgui"
+basgui.ResetOnSpawn = false
 local fullscreenz = it("Frame")
 fullscreenz.Parent = basgui
 fullscreenz.BackgroundColor3 = Color3.new(255, 255, 255)

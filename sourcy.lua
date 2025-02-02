@@ -298,7 +298,9 @@ function chatfunc(text,color,typet,font,timeex)
 	chat()
 end
 
-local Create = loadstring(game:HttpGet("https://raw.githubusercontent.com/hellothere-lol/a/refs/heads/main/rbxutility.lua"))()
+local rbxutility = loadstring(game:HttpGet("https://raw.githubusercontent.com/hellothere-lol/a/refs/heads/main/rbxutility.lua"))()
+
+local Create = rbxutility.Create
 
 CFuncs = {	
 	["Part"] = {

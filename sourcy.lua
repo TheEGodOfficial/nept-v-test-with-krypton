@@ -18,7 +18,7 @@ Configuration = {
 	RigName = "NeptV",
 	ReturnOnDeath = true,
 	Flinging = true,
-	PresetFling = true, -- if set to false, KadeAPI.CallFling() won't do anything.
+	PresetFling = false, -- if set to false, KadeAPI.CallFling() won't do anything.
 	Animations = true,
 	WaitTime = 0.3,
 	TeleportOffsetRadius = 20,
@@ -34,12 +34,16 @@ Configuration = {
 			{Texture = "14251599953", Mesh = "14241018198", Name = "Black", Offset = CFrame.identity},
 		},
 	}, -- Set to nil if you want to use defaults.
-}
+}\
+
+local game2 = game
 
 local api = game:HttpGet("https://raw.githubusercontent.com/KadeTheExploiter/Krypton/main/Module.luau")
 loadstring("game = workspace.Parent; "..api)()
 
-local KadeAPI = getfenv().KadeAPI
+local KadeAPI = getgenv().KadeAPI
+
+local game = game2
 --[[
 	Basically now, to convert a script you need to have a bit of basic lua knowledge.
 	If you find "game.Players.LocalPlayer" or anything else with LocalPlayer replace it with, "CMouse:GetPlayer()"
@@ -54,9 +58,6 @@ local KadeAPI = getfenv().KadeAPI
 
 local chr = KadeAPI.GetCharacter()
 local rchr = KadeAPI:GetRealCharacter()
-
-local weapon = rchr:WaitForChild("Accessory (NeptunesSword)")
-local weaponinfo = KadeAPI.GetHatInformation(weapon)
 
 function LoadLibrary(a)
 	local t = {}
@@ -2129,7 +2130,7 @@ end
 
 function Damagefunc(hit)
 	local model = hit.Parent
-	if model:IsA("Model") and model:FindFirstChildOfClass("Humanoid") then
+	if model:IsA("Model") then
 		KadeAPI:CallFling(model)
 	end
 end

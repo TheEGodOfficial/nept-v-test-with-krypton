@@ -2131,7 +2131,7 @@ end
 function Damagefunc(hit)
 	local model = hit.Parent
 	if model:IsA("Model") then
-		KadeAPI:CallFling(model)
+		KadeAPI.CallFling(model)
 	end
 end
 function ShowDamage(Pos, Text, Time, Color)

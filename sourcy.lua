@@ -1201,7 +1201,9 @@ function sandbox(var,func)
 	setfenv(func,newenv)
 	return func
 end
+chr.Animate:Destroy()
 
+cors = {}
 mas = Instance.new("Model",game:GetService("Lighting"))
 Model0 = Instance.new("Model")
 
@@ -1265,6 +1267,26 @@ Part475.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-0
 Part475.TopSurface = Enum.SurfaceType.SmoothNoOutlines
 Part475.brickColor = BrickColor.new("Mid gray")
 Part475.Transparency = 1
+
+Model0.Parent = mas
+
+for i,v in pairs(mas:GetChildren()) do
+	v.Parent = chr
+	pcall(function() v:MakeJoints() end)
+end
+mas:Destroy()
+for i,v in pairs(cors) do
+	spawn(function()
+		pcall(v)
+	end)
+end
+for i,v in pairs(Model0:GetChildren()) do
+	if v:IsA("Part") then
+		v.Locked = true
+		v.Anchored = false
+		v.CanCollide = false
+	end
+end
 
 plr = game:GetService("Players").LocalPlayer
 char = chr

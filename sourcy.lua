@@ -1202,6 +1202,69 @@ function sandbox(var,func)
 	return func
 end
 
+mas = Instance.new("Model",game:GetService("Lighting"))
+Model0 = Instance.new("Model")
+
+Part3 = Instance.new("Part")
+
+local weapon = rchr:WaitForChild("Accessory (NeptunesSword)")
+local weaponinfo = KadeAPI.GetHatInformation(weapon)
+KadeAPI.SetHatAlign(weaponinfo,Part3,CFrame.new(0,0.25,0.5) * CFrame.Angles(math.rad(0),math.rad(-90),math.rad(-90)))
+
+Part3.Parent = Model0
+Part3.CFrame = CFrame.new(-0.608517408, 2.57421446, -14.2038746, 0.999985635, 0.00162795268, -0.00510686403, 0.0051367972, -0.0189460143, 0.999807417, 0.00153088395, -0.999819279, -0.0189541057)
+Part3.Orientation = Vector3.new(-88.8799973, -164.919998, 164.830002)
+Part3.Position = Vector3.new(-0.608517408, 2.57421446, -14.2038746)
+Part3.Rotation = Vector3.new(-91.0899963, -0.289999992, -0.0899999961)
+Part3.Color = Color3.new(0.0666667, 0.0666667, 0.0666667)
+Part3.Velocity = Vector3.new(1.6413172e-07, 0.00246645301, 2.15686623e-06)
+Part3.Size = Vector3.new(0.275000006, 0.315999985, 0.303375006)
+Part3.Anchored = true
+Part3.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part3.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part3.BrickColor = BrickColor.new("Really black")
+Part3.CanCollide = false
+Part3.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part3.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part3.Material = Enum.Material.Glass
+Part3.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part3.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
+Part3.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part3.brickColor = BrickColor.new("Really black")
+Part3.Transparency = 1
+
+Part475 = Instance.new("Part")
+
+Weld45 = Instance.new("Weld")
+Weld45.Name = "BTWeld"
+Weld45.Parent = Part3
+Weld45.C1 = CFrame.new(3.75509262e-06, -2.08321857, -0.731868029, -1, 1.18976459e-07, 3.0064075e-07, -1.19325705e-07, -1.00000024, -5.96046448e-08, 3.02987246e-07, -5.77419996e-08, 1.00000024)
+Weld45.Part0 = Part3
+Weld45.Part1 = Part475
+Weld45.part1 = Part475
+
+Part475.Name = "TrueHandle"
+Part475.Parent = Model0
+Part475.CFrame = CFrame.new(-0.615642607, 3.34541011, -12.1349049, -0.999985635, -0.00162807154, -0.00510656228, -0.00513649778, 0.0189459547, 0.999807417, -0.00153100886, 0.999819279, -0.0189540461)
+Part475.Orientation = Vector3.new(-88.8799973, -164.919998, -15.1700001)
+Part475.Position = Vector3.new(-0.615642607, 3.34541011, -12.1349049)
+Part475.Rotation = Vector3.new(-91.0899963, -0.289999992, 179.909988)
+Part475.Color = Color3.new(0.803922, 0.803922, 0.803922)
+Part475.Velocity = Vector3.new(4.18465866e-08, 0.00247076293, 5.49908464e-07)
+Part475.Size = Vector3.new(0.275000006, 1.73512506, 0.280375004)
+Part475.Anchored = true
+Part475.BackSurface = Enum.SurfaceType.SmoothNoOutlines
+Part475.BottomSurface = Enum.SurfaceType.SmoothNoOutlines
+Part475.BrickColor = BrickColor.new("Mid gray")
+Part475.CanCollide = false
+Part475.FrontSurface = Enum.SurfaceType.SmoothNoOutlines
+Part475.LeftSurface = Enum.SurfaceType.SmoothNoOutlines
+Part475.Material = Enum.Material.Metal
+Part475.RightSurface = Enum.SurfaceType.SmoothNoOutlines
+Part475.RotVelocity = Vector3.new(-2.08372262e-06, 1.18487212e-14, 1.58565669e-07)
+Part475.TopSurface = Enum.SurfaceType.SmoothNoOutlines
+Part475.brickColor = BrickColor.new("Mid gray")
+Part475.Transparency = 1
 
 plr = game:GetService("Players").LocalPlayer
 char = chr
@@ -1616,7 +1679,7 @@ end
 ---- WEAPON OR STUFF
 local rarmor = CreateParta(m,1,0,"SmoothPlastic",BrickColor.Random())
 local weaponweld = CreateWeld(rarmor,tors,rarmor,-3,0,-0.5,math.rad(0),math.rad(0),math.rad(-40),0,0,0,math.rad(0),math.rad(0),math.rad(0))
-local MainWeldS = KadeAPI.SetHatAlign(weaponinfo, rarmor, CFrame.new(-5, 0.01, 0) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))) --CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
+local MainWeldS = CreateWeld(Part475,rarmor,Part475,0,0,0,math.rad(90),math.rad(90),math.rad(0),0,0,0,math.rad(0),math.rad(0),math.rad(0))
 local A0 = Instance.new("Attachment",rarmor)
 A0.Position = Vector3.new(-2.5,0.25,0)
 local A1 = Instance.new("Attachment",rarmor)

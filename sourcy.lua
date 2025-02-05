@@ -36,13 +36,10 @@ Configuration = {
 	}, -- Set to nil if you want to use defaults.
 }
 
-local game2 = game
-
-loadstring("game = workspace.Parent; game:HttpGet('https://raw.githubusercontent.com/TheEGodOfficial/PoopKryptonModuleEditIG/refs/heads/main/Stuff/Source.lua')")()
+loadstring("game:HttpGet('https://raw.githubusercontent.com/TheEGodOfficial/PoopKryptonModuleEditIG/refs/heads/main/Stuff/Source.lua')")()
 
 local KadeAPI = getgenv().KadeAPI
 
-local game = game2
 --[[
 	Basically now, to convert a script you need to have a bit of basic lua knowledge.
 	If you find "game.Players.LocalPlayer" or anything else with LocalPlayer replace it with, "CMouse:GetPlayer()"

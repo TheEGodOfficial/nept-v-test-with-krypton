@@ -34,7 +34,7 @@ Configuration = {
 			{Texture = "14251599953", Mesh = "14241018198", Name = "Black", Offset = CFrame.identity},
 		},
 	}, -- Set to nil if you want to use defaults.
-}\
+}
 
 local game2 = game
 

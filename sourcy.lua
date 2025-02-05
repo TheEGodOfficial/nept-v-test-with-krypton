@@ -36,7 +36,7 @@ Configuration = {
 	}, -- Set to nil if you want to use defaults.
 }
 
-loadstring("game:HttpGet('https://raw.githubusercontent.com/TheEGodOfficial/PoopKryptonModuleEditIG/refs/heads/main/Stuff/Source.lua')")()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/TheEGodOfficial/PoopKryptonModuleEditIG/refs/heads/main/Stuff/Source.lua'))()
 
 local KadeAPI = getgenv().KadeAPI
 

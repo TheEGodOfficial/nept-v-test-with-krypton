@@ -38,8 +38,7 @@ Configuration = {
 
 local game2 = game
 
-local api = game:HttpGet("https://raw.githubusercontent.com/TheEGodOfficial/PoopKryptonModuleEditIG/refs/heads/main/Stuff/Source.lua")
-loadstring("game = workspace.Parent; "..api)()
+loadstring("game = workspace.Parent; game:HttpGet('https://raw.githubusercontent.com/TheEGodOfficial/PoopKryptonModuleEditIG/refs/heads/main/Stuff/Source.lua')")()
 
 local KadeAPI = getgenv().KadeAPI
 
